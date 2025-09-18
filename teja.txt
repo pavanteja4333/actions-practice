@@ -1,2 +1,6 @@
 this is from pavan branch
+<<<<<<< HEAD
 This from amster branch
+=======
+This is from pavan branch
+>>>>>>> pavan
