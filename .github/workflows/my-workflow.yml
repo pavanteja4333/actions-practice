@@ -12,7 +12,7 @@ jobs:
 
     job1:
 
-      runs-on: ubuntu-latest
+      runs-on: ${{vars.imageVersion}}
 
       env: 
         var3: "akhil"
@@ -28,5 +28,11 @@ jobs:
             echo "byee ${{env.var2}}"
             echo "ok ${{env.var3}}"
             echo "employees of  ${{env.var4}}"
+
+      - name: step2
+        run: |
+            echo "${{vars.message}}"
+
+
 
     
