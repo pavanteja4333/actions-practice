@@ -4,6 +4,16 @@ run-name: kamal-${{github.sha}}-${{github.run_number}}
 on:
     push:
     workflow_dispatch:
+        inputs: 
+            age: 
+                type: string
+                default: "23"
+                description: "this the age of patan"
+            height: 
+                type: string
+                default: "6.0"
+                description: "this the height of patan"
+
     
 env: 
     var1: "pavan"
@@ -36,6 +46,7 @@ jobs:
         run: |
             echo "${{vars.message}}"
             echo "my secret is ${{env.my_secret}}"
+            echo "${{inputs.age}} and ${{inputs.height}}"
 
 
 
