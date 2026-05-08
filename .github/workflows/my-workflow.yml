@@ -30,9 +30,11 @@ jobs:
             echo "employees of  ${{env.var4}}"
 
       - name: step2
+        env: 
+            my_secret: ${{secrets.aws_access_key}}
         run: |
             echo "${{vars.message}}"
-            echo "my secret is ${{secrets.aws_access_key}}"
+            echo "my secret is ${{env.my_secret}}"
 
 
 
