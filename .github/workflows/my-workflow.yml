@@ -16,11 +16,13 @@ jobs:
 
       env: 
         var3: "akhil"
+        var2: "pathan basha khan"
 
       steps:
       - name: step1
         env:
             var4: "digistack"
+            var1: "pavan ramana"
         run: |
             echo "hii ${{env.var1}}" 
             echo "byee ${{env.var2}}"
