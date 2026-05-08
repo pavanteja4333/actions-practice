@@ -8,7 +8,7 @@ jobs:
 
     job1:
 
-        runs-on: ubuntu:latest
+        runs-on: ubuntu:slim
 
         steps:
         - name: step1
