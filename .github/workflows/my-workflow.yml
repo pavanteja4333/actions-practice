@@ -3,7 +3,10 @@ name: github-context-demo
 on:
     push:
     workflow_dispatch:
-
+    
+env: 
+    var1: "pavan"
+    var2: "pathan"
 
 jobs:
 
@@ -13,5 +16,9 @@ jobs:
 
       steps:
       - name: step1
-        run: echo "hii bro"
+        run: |
+            echo "hii ${{env.var1}}" 
+            echo "byee ${{env.var2}}"
+            echo "ok akhil"
+
     
