@@ -1,4 +1,5 @@
 name: github-context-demo
+run-name: kamal
 
 on:
     push:
