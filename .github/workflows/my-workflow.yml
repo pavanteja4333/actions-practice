@@ -14,11 +14,17 @@ jobs:
 
       runs-on: ubuntu-latest
 
+      env: 
+        var3: "akhil"
+
       steps:
       - name: step1
+        env:
+            var4: "digistack"
         run: |
             echo "hii ${{env.var1}}" 
             echo "byee ${{env.var2}}"
-            echo "ok akhil"
+            echo "ok ${{env.var3}}"
+            echo "employees of  ${{env.var4}}"
 
     
