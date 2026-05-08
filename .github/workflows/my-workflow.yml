@@ -1,6 +1,7 @@
 name: github-context-demo
 
 on:
+    push:
     workflow_dispatch:
 
 
