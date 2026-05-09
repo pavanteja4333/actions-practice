@@ -1,4 +1,5 @@
 name: vars demo
+run-name: ${{github.run_id}}-pavan
 
 on:
     push:
@@ -19,4 +20,4 @@ jobs:
         steps:
             - name: step1
               run: |
-                echo "hi"
+                echo "hi from ${{inputs.version}}"
