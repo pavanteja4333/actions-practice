@@ -1,0 +1,14 @@
+name: vars demo
+
+on:
+    push:
+        branches: ["main"]
+    workflow_dispatch:
+
+jobs:
+    myjob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step1
+              run: |
+                echo "hi"
