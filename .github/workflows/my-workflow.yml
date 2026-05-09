@@ -2,7 +2,7 @@ name: github-context-demo
 run-name: kamal-${{github.sha}}-${{github.run_number}}
 
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs: 
             age: 

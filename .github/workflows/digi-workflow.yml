@@ -17,7 +17,9 @@ on:
 jobs:
     myjob:
         runs-on: ubuntu-latest
+        environment: dev
         steps:
             - name: step1
               run: |
                 echo "hi from ${{inputs.version}}"
+                echo "${{vars.my_dev_user}}"
