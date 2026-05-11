@@ -1,0 +1,22 @@
+name: techbyte-wf
+run-name: ${{github.run_id}}-pavan
+
+on:
+    push:
+    workflow_dispatch:
+        inputs:
+            version:
+                type: string
+                default: conditional
+
+
+jobs:
+    job1:
+
+        runs-on: ubuntu-slim
+          
+        steps:
+            - name: step1
+              if: github.event_name == 'workflow_dispatch' && inputs.version == 'conditional'
+              run: | 
+                echo "this is pavan "
