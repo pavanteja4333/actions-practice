@@ -1,7 +1,8 @@
 name: pavan-practice
 
 on: 
-    push:
+    workflow_dispatch:
+      
 
 jobs:
     job1:
@@ -21,4 +22,4 @@ jobs:
         needs: job1
         steps:
           - name: step0
-            run: "${{needs.job1.outputs.op1}}"
+            run: echo "${{needs.job1.outputs.op1}}"

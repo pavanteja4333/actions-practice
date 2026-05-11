@@ -1,7 +1,8 @@
 name: techbyte-wf
 
 on:
-    push:
+    #push:
+    workflow_dispatch: 
 
 jobs:
     job1:
