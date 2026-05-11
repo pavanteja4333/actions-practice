@@ -21,4 +21,4 @@ jobs:
         needs: job1
         steps:
           - name: step0
-            run: "${{needs.job1.outputs.op1.name}}"
+            run: "${{needs.job1.outputs.op1}}"
