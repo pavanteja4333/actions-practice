@@ -11,7 +11,7 @@ jobs:
         steps:
             - name: step1
               id: pv 
-              run: echo "name = pavan" >> "$GITHUB_OUTPUT"
+              run: echo "name=pavan" >> "$GITHUB_OUTPUT"
 
             - name: step2
               run: echo "${{steps.pv.outputs.name}}"
