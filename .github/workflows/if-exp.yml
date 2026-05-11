@@ -14,9 +14,14 @@ jobs:
     job1:
 
         runs-on: ubuntu-slim
-          
+        env:
+            myenv: "devops"
         steps:
             - name: step1
               if: github.event_name == 'workflow_dispatch' && inputs.version == 'conditional'
               run: | 
                 echo "this is pavan "
+
+            - name: step2
+              if: github.event_name == 'push' 
+              run: echo "this is step2"
