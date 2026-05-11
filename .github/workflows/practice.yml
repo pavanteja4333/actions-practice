@@ -1,0 +1,24 @@
+name: pavan-practice
+
+on: 
+    push:
+
+jobs:
+    job1:
+        runs-on: ubuntu-slim
+        outputs:
+          op1: ${{steps.xyz.outputs.name}} 
+        steps:
+            - name: step1
+              id: xyz
+              run: echo "name=pavan" >> "$GITHUB_OUTPUT"
+
+            - name: step2 
+              run: echo "${{steps.xyz.outputs.name}}"
+
+    job2:
+        runs-on: ubuntu-slim
+        needs: job1
+        steps:
+          - name: step0
+            run: "${{needs.job1.outputs.op1}}"

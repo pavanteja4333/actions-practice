@@ -7,7 +7,9 @@ jobs:
     job1:
 
         runs-on: ubuntu-latest
-
+        outputs:
+            op1: ${{steps.pv.outputs.name}}
+          
         steps:
             - name: step1
               id: pv 
@@ -17,3 +19,12 @@ jobs:
 
             - name: step2
               run: echo "${{steps.pv.outputs.name}}-job-${{steps.pv.outputs.job}}"
+
+
+    job2:
+        runs-on: ubuntu-slim
+        needs: job1
+        steps:
+            - name: step1
+              run: | 
+                echo "${{needs.job1.outputs.op1}}"
