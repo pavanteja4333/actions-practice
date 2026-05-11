@@ -1,4 +1,4 @@
-name: techbyte-wf
+name: confitional-wf
 run-name: ${{github.run_id}}-pavan
 
 on:
