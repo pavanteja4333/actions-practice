@@ -85,3 +85,17 @@ resource "aws_route_table_association" "pavan_public_assoc" {
   subnet_id      = aws_subnet.pavan_vpc_subnet.id
   route_table_id = aws_route_table.pavan_public_rt.id
 }
+
+resource "aws_instance" "digi_instance" {
+
+    ami = "ami-08399392f867d1d1f"
+    instance_type = "t3.micro"
+    key_name = "nit"
+    subnet_id = aws_subnet.pavan_vpc_subnet.id
+    vpc_security_group_ids = [aws_security_group.instance_sg.id]
+
+    tags = {
+      Name = "pavan-system"
+    }
+  
+}
