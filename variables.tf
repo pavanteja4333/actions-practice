@@ -36,7 +36,7 @@ variable "instance_type" {
 variable "region" {
     description = "region for the vpc"
     type = string
-    default = "ap-south-1"
+    default = "us-west-1"
 
 }
 

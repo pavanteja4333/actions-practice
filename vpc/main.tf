@@ -8,7 +8,7 @@ resource "aws_vpc" "pavan_vpc" {
 
 resource "aws_subnet" "pavan_vpc_subnet" {
   cidr_block = "10.100.1.0/24"
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-west-1a"
   vpc_id = aws_vpc.pavan_vpc.id
   map_public_ip_on_launch = true
  tags = {
@@ -16,14 +16,6 @@ resource "aws_subnet" "pavan_vpc_subnet" {
   }
 }
   
-resource "aws_instance" "pavan_instance" {
-  instance_type = var.instance_type
-  ami = "ami-03793655b06c6e29a"
-  key_name = "terraform"
-  subnet_id = aws_subnet.pavan_vpc_subnet.id
-  vpc_security_group_ids = [aws_security_group.instance_sg.id]
-  tags = var.tags
-}
 
 resource "aws_security_group" "instance_sg" {
   name        = "${aws_vpc.pavan_vpc.name}-security_group" 
@@ -54,8 +46,6 @@ resource "aws_security_group" "instance_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-
 
 
   egress {
