@@ -9,7 +9,4 @@ resource "aws_instance" "digi_instance" {
   
 }
 
-resource "time_sleep" "wait_for_new_deployment" {
-  create_duration = "60s"
-}
 
