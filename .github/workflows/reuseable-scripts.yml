@@ -19,12 +19,15 @@ jobs:
     job2:
         runs-on: ubuntu-latest 
         needs: job1
+        defaults:
+            run:
+                working-directory: ./app
         steps:
             - name: download artifact
               uses: actions/download-artifact@v8
               with:
                 name: app-file
-                path: .
+                path: ./app
             - name: read file
               run: |
                 cat app.txt
