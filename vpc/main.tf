@@ -18,7 +18,7 @@ resource "aws_subnet" "pavan_vpc_subnet" {
   
 
 resource "aws_security_group" "instance_sg" {
-  name        = "${aws_vpc.pavan_vpc.name}-security_group" 
+  name        = "${aws_vpc.pavan_vpc.id}-security_group" 
   description = "Allowing SSH traffic"
   vpc_id      = aws_vpc.pavan_vpc.id
 
