@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "digistackpavan234tej"
+    bucket = "digistackpavan1234tej"
     key = "test/terraform.tfstate"
     region = "us-west-1"
     encrypt = true
