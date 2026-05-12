@@ -2,7 +2,7 @@ name: confitional-wf
 run-name: ${{github.run_id}}-pavan
 
 on:
-    push:
+    #push:
     workflow_dispatch:
         inputs:
             version:

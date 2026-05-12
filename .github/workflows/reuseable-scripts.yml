@@ -7,11 +7,24 @@ jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
-            - name: step1
+            - name: creating file
               run: | 
                 echo "this is custom script" >> "app.txt"
-            - name: step2
+            - name: upload artifact
               uses: actions/upload-artifact@v7
               with:
                 name: app-file
                 path: app.txt
+    
+    job2:
+        runs-on: ubuntu-latest 
+        needs: job1
+        steps:
+            - name: download artifact
+              uses: actions/download-artifact@v8
+              with:
+                name: app-file
+                path: .
+            - name: read file
+              run: |
+                cat app.txt
