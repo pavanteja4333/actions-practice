@@ -1,6 +1,6 @@
 # 1. The Core Bucket
 resource "aws_s3_bucket" "pavan_bucket_s3" {
-  bucket = "digistackpavan234tej"
+  bucket = "digistackpavan1234tej"
   force_destroy = true
 
 }
