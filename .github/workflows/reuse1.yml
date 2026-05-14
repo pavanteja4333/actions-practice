@@ -1,0 +1,12 @@
+name: Reuse workflow
+
+on:
+  workflow_call:
+    
+jobs:
+    reuse:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Reuse workflow
+          run: echo "This workflow is being reused!"
+        
