@@ -2,7 +2,14 @@ name: calling reuse workflow
 
 on:
     workflow_dispatch:
+        inputs:
+            name:
+                description: 'Name to greet'
+                required: true
+                default: 'John Doe'
 
 jobs:
     call_reuse_workflow:
         uses: ./.github/workflows/reuse1.yml
+        with:
+            name: "${{ inputs.name }}"

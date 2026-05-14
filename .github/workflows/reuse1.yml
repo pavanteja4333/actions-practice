@@ -2,11 +2,17 @@ name: Reuse workflow
 
 on:
   workflow_call:
+    inputs:
+      name:
+        type: string
+        description: 'Name to greet'
+        required: true
+        default: 'World'
     
 jobs:
     reuse:
         runs-on: ubuntu-latest
         steps:
         - name: Reuse workflow
-          run: echo "This workflow is being reused!"
+          run: echo "Hello, ${{ inputs.name }}! This workflow is being reused!"
         
