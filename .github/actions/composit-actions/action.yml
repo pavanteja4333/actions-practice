@@ -1,11 +1,16 @@
 name: my-composite-action
 description: A composite action that runs multiple steps
 
+inputs:
+  example-input:
+    description: 'An example input for the composite action'
+    required: false
+    default: 'Default value'
 runs:
   using: "composite"
   steps:
     - name: Step 1 - Print Hello
       shell: bash
-      run: echo "Hello, World!"
+      run: echo "Hello, World! ${{ inputs.example-input }}"
 
     

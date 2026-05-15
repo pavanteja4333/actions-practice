@@ -10,4 +10,6 @@ jobs:
             - uses: actions/checkout@v6
             - name: using composite action
               uses: ./.github/actions/composit-actions/
+              with:
+                example-input: "This is a custom input value"
               
