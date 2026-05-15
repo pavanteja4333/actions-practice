@@ -8,5 +8,5 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: using composite action
-              uses: ./.github/composit-actions
+              uses: ./.github/actions/composit-actions
               
