@@ -4,12 +4,20 @@ on:
     workflow_dispatch:
 
 jobs:
-    my-custom-action:
+    
+    # my-custom-action:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - uses: actions/checkout@v6
+    #         - name: using composite action
+    #           uses: ./.github/actions/composit-actions/
+    #           with:
+    #             example-input: "This is a custom input value"
+     
+
+    my-docker-action:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v6
-            - name: using composite action
-              uses: ./.github/actions/composit-actions/
-              with:
-                example-input: "This is a custom input value"
-              
+            - name: using docker action
+              uses: ./.github/actions/docker-actions/

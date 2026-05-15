@@ -1,0 +1,8 @@
+name: my-docker-action
+description: A composite action that runs multiple steps
+
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+    

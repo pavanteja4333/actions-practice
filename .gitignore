@@ -25,3 +25,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.github/actions/docker-actions/.venv
+.github/actions/docker-actions/__pycache__
