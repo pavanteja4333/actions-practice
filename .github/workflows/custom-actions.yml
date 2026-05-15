@@ -9,5 +9,5 @@ jobs:
         steps:
             - uses: actions/checkout@v6
             - name: using composite action
-              uses: ./.github/actions/composit-actions/
+              uses: .\.github\actions\composit-actions\
               
