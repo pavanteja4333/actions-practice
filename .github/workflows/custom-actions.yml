@@ -1,0 +1,12 @@
+name: my-custom-actions
+
+on:
+    workflow_dispatch:
+
+jobs:
+    my-custom-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: using composite action
+              uses: ./.github/composit-actions
+              
