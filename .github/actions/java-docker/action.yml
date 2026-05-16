@@ -1,0 +1,7 @@
+name: Build Java Docker Image
+description: 'A GitHub Action to build a Docker image for a Java application.'
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
