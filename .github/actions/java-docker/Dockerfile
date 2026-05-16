@@ -1,4 +1,4 @@
-FROM java:11-jdk-slim
+FROM java:11
 
 WORKDIR /app
 
